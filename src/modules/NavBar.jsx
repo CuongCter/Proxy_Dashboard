@@ -16,6 +16,7 @@ import IconProxyList from '../assets/icons/incons-sidebar/ProxyList.png'
 import IconInfoAPI from '../assets/icons/incons-sidebar/Info.png'
 import IconGuide from '../assets/icons/incons-sidebar/Guide.png'
 import IconTerm from '../assets/icons/incons-sidebar/Term.png'
+import IconLogout from '../assets/icons/icons-logout/Logout.png'
 import { useNavigate, useParams } from 'react-router-dom'
 const NavBar = () => {
 
@@ -106,6 +107,10 @@ const renderComponent = () => selectMenu.component
               </div>
             ))
           }
+        </div>
+        <div className='layoutDetail__main-logout'>
+            <img className='logout-icon' src={IconLogout} alt="" />
+            <div className='logout-content'>Logout</div>
         </div>
       </div>
     </div>
