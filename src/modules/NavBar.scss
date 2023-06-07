@@ -26,7 +26,7 @@
                align-items: center;               
                 &-name{
                     margin-left: 26px;
-                    font-weight: 700;
+                    font-weight: 400;
                     font-size: 18px;
                     color: #E7F3FF;
                 }
@@ -44,9 +44,9 @@
         &-logout{
             width: 100%;
             display: flex;
-            font-weight: 700;
+            font-weight: 400;
             color: #E7F3FF;
-            margin-bottom: 50px;
+            margin-bottom: 52px;
             .logout-icon{
                 padding-left: 33px;
                 width: 60px;
@@ -61,7 +61,7 @@
     }
 }
 .logoProxy{
-    font-weight: 700;
+    font-weight: 400;
     font-size: 18px;
     padding-top: 41px;
     padding-bottom: 32px;

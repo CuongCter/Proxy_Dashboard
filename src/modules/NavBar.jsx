@@ -18,6 +18,7 @@ import IconGuide from '../assets/icons/incons-sidebar/Guide.png'
 import IconTerm from '../assets/icons/incons-sidebar/Term.png'
 import IconLogout from '../assets/icons/icons-logout/Logout.png'
 import { useNavigate, useParams } from 'react-router-dom'
+import Admin from '../components/Admin/Admin'
 const NavBar = () => {
 
 const arrSideBar = [
@@ -47,7 +48,7 @@ const arrSideBar = [
     name: 'Buy Bandwidth',
     icon: IconBuyBandwidth,
     component: <BuyBandwidth/>,
-    path: 'buy-bandwidth'
+    path: '/buy-bandwidth'
   },
   {
     id: 5,
@@ -82,10 +83,15 @@ const params = useParams()
 const [selectMenu, setSelectMenu] = useState(arrSideBar[0])
 const navigate = useNavigate()
 const onSelectTab = (tabValue) =>{
-  navigate(tabValue)
+  const tab = arrSideBar.find((tab) => tab.id === tabValue.id)
+  tab && setSelectMenu(tab)
+   navigate(tabValue.path)
+   console.log(tabValue.id);
 }
-const renderComponent = () => selectMenu.component
+
   return (
+    <>
+    
     <div className='layoutDetail'>
       <div className='layoutDetail__main'>
         <div className="layoutDetail__main-sidebar">
@@ -98,7 +104,7 @@ const renderComponent = () => selectMenu.component
               <div 
                 key={index} 
                 className={`menu-sidebar ${selectMenu.id === index + 1 ? 'active' : ''}`}
-                onClick={()=>onSelectTab(itemMenu.path)}
+                onClick={()=>onSelectTab(itemMenu)}
               >
                   <div className='menu-sidebar-icon'>
                     <img src={itemMenu.icon} alt="" />
@@ -114,6 +120,8 @@ const renderComponent = () => selectMenu.component
         </div>
       </div>
     </div>
+    </>
+    
   )
 }
 
