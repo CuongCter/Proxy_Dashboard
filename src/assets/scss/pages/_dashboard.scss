@@ -1,0 +1,147 @@
+@mixin center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @content;
+}
+@mixin title{
+    font-family: 'GoogleSans', sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 25px;
+    @content
+}
+.dashboard{
+    width: 100%;
+    min-height: 100vh;
+    position: relative;
+    padding-left: 28px ;
+    padding-right: 51px;
+    &__admin{
+        position: absolute;
+        top: 44px;
+        right: 51px;
+    }
+    &__overview{
+        margin-top: 80px;
+        &-title{
+            font-family: 'GoogleSans', sans-serif;
+            font-weight: 700;
+            font-size: 25px;
+            line-height: 32px;
+        }
+        &-main{
+            width: 100%;
+            display: flex;
+            padding-top: 19px;
+            padding-bottom: 30px;
+            justify-content: space-between;
+            .box{
+                width: 358px;
+                height: 130px;
+                border: 1px solid #d3d6da;
+                border-radius: 15px;
+            }
+            &-port{
+                display: flex;
+                align-items: center;
+                .port__icon{
+                    margin-left: 26px;
+                    width: 60px;
+                    height: 59px;
+                    background: #E7F6FE;
+                    border-radius: 49.5px;
+                    @include center{};
+                }
+                .port__content{
+                    margin-left: 20px;
+                    width: 230px;
+                    &-active{
+                        display: flex;
+                        justify-content: space-between;
+                        &-title {
+                            @include title{}
+                            margin-bottom: 12px;
+                        }
+                        &-total{
+                            @include title{}
+                        }
+                    }
+                    &-unused{
+                        display: flex;
+                        justify-content: space-between;
+                    }
+                }
+            }
+            &-bandwidth{
+                display: flex;
+                align-items: center;
+                .bandwidth__icon{
+                    margin-left: 26px;
+                    width: 58.4px;
+                    height: 59px;
+                    background: #E2E1FE;
+                    border-radius: 49px;
+                    @include center{};
+                }
+                .bandwidth__content{
+                    margin-left: 19.6px;
+                    &-title{
+                        @include title{}
+                    }
+                    &-total{
+                        @include title{}
+                    }
+                    &-more{
+                        font-family: 'GoogleSans', sans-serif;
+                        font-weight: 700;
+                        font-size: 15px;
+                        line-height: 25px;
+                        color: #2A86FF;
+                    }
+                }
+            }
+            &-balance{
+                display: flex;
+                align-items: center;
+                .balance__icon{
+                    width: 59px;
+                    height: 59px;
+                    margin-left: 27px;
+                    background: #FCF3D4;
+                    border-radius: 49.5px;
+                    @include center{};
+                }
+                .balance__content{
+                    margin-left: 20px;
+                    width: 230px;
+                    &-total{
+                        display: flex;
+                        margin-bottom: 13px;
+                        justify-content: space-between;
+                        &-title{
+                            @include title{}
+                        }
+                        &-sum{
+                            @include title{}
+                        }
+                    }
+                    &-topup{
+                        width: 118px;
+                        height: 38px;
+                        padding: 10px 25px;
+                        background: #2A86FF;
+                        box-shadow: 0px 4px 10px rgba(8, 35, 106, 0.25);
+                        border-radius: 8px;
+                        color: white;
+                        border: none;
+                        font-family: 'GoogleSans', sans-serif;
+                        font-weight: 700;
+                        font-size: 15px;
+                       
+                    }
+                }
+            }
+        }
+    }
+}
