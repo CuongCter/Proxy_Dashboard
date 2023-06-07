@@ -1,0 +1,53 @@
+.layoutDetail{
+    min-height: 100vh;
+    background: #01162B;
+    width: 250px;
+    
+    
+    &__main{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        &-sidebar{
+            width: 100%;
+            height: 70%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            cursor: pointer;
+            transition: all 0.2s ease-in-out;
+          
+            
+            .menu-sidebar{
+               display: flex;
+               width: 100%;
+               height: 60px;
+               padding-left: 33px;
+               align-items: center;               
+                &-name{
+                    z-index: 20;
+                    margin-left: 26px;
+                    font-weight: 700;
+                    font-size: 18px;
+                    color: #E7F3FF;
+                }
+                &.active{ 
+                    background-color: #2F4255; 
+                    
+                    .menu-sidebar-name {
+                        color: #ffffff ; 
+                        
+                    }
+               }
+            }
+            
+        }
+    }
+}
+.logoProxy{
+    font-weight: 700;
+    font-size: 18px;
+    padding-top: 41px;
+    padding-bottom: 32px;
+    color: white;
+}

@@ -1,0 +1,84 @@
+// @font-face {
+//   font-family: "GoogleSans";
+//   font-style: normal;
+//   font-weight: normal;
+//   src: local("GoogleSans"), url("./assets/font/GoogleSansOTF/GoogleSans-Regular.otf") format("woff");
+// }
+
+// @font-face {
+//   font-family: "GoogleSans";
+//   font-style: normal;
+//   font-weight: 300;
+//   src: local("GoogleSans"), url("./assets/font/GoogleSansOTF/GoogleSans-Regular.otf") format("woff");
+// }
+
+// @font-face {
+//   font-family: "GoogleSans";
+//   font-style: normal;
+//   font-weight: 600;
+//   src: local("GoogleSans"), url("./assets/font/GoogleSansOTF/GoogleSans-Medium.otf") format("woff");
+// }
+
+// @font-face {
+//   font-family: "GoogleSans";
+//   font-style: normal;
+//   font-weight: 700;
+//   src: local("GoogleSans"), url("./assets/font/GoogleSansOTF/GoogleSans-Bold.otf") format("woff");
+// }
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "GoogleSans";
+}
+
+body {
+  line-height: 1.5;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  outline: none;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+$mobile-width: 600px;
+$tablet-width: 1024px;
+
+@mixin mobile {
+  @media only screen and (max-width: $mobile-width) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media only screen and (max-width: $tablet-width) {
+    @content;
+  }
+}

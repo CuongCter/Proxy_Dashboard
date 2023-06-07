@@ -1,13 +1,13 @@
 import React, { Fragment } from 'react'
 import NavBar from '../modules/NavBar'
 import { Outlet } from 'react-router-dom'
-
+import './LayoutPage.scss'
 const LayoutPage = () => {
   return (
-    <Fragment>
+    <div className='container'>
         <NavBar></NavBar>
         <Outlet></Outlet>
-    </Fragment>
+    </div>
   )
 }
 
