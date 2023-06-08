@@ -126,7 +126,7 @@ const Register = () => {
           </div>
         </div>
       </div>
-      <div className="register__content">
+      <div className="register__banner">
         <LoginBanner></LoginBanner>
       </div>
     </div>
