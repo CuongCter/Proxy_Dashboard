@@ -13,6 +13,8 @@ import Pricing from './pages/Pricing'
 import InfoAPI from './pages/InfoAPI'
 import Guide from './pages/Guide'
 import TermOfService from './pages/TermOfService'
+import ChangePassword from './pages/ChangePassWord'
+
 
 function App() {
 
@@ -33,6 +35,7 @@ function App() {
         <Route path='/login' element={<Login></Login>}/>
         <Route path='/register' element={<Register></Register>}/>
         <Route path='/forget-password' element={<ForgetPassword></ForgetPassword>}/>
+        <Route path='/change-password' element={<ChangePassword></ChangePassword>}/>
       </Routes>
     </>
   )

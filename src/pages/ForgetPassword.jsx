@@ -12,6 +12,9 @@ const ForgetPassword = () => {
   const navigateSignIn = () =>{
     navigate('/login')
   }
+  const navigateChangePassword = () => {
+    navigate('/change-password')
+  }
   return (
     <div className='forgot'>
       <div className="forgot__content">
@@ -45,7 +48,7 @@ const ForgetPassword = () => {
                 </div> */}
                 </div>
                 <div >
-                  <button type='submit' className='sendCode' >SEND CODE</button>
+                  <button type='submit' className='sendCode' onClick={navigateChangePassword}>SEND CODE</button>
                 </div>
                 <div className='choose-other'>
                   <div onClick={navigateSignUp}>Sign up</div>
