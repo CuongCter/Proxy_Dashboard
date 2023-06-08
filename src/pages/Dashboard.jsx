@@ -4,6 +4,7 @@ import Admin from '../components/Admin/Admin'
 import IconPort from '../assets/images/overview/Port.png'
 import IconBandWidth from '../assets/images/overview/Bandwidth.png'
 import IconDollar from '../assets/images/overview/$.png'
+import PlansBillings from '../components/pland_bill/plansBillings'
 const Dashboard = () => {
   return (
     <div className='dashboard'>
@@ -45,7 +46,7 @@ const Dashboard = () => {
           </div>
           <div className="balance__content">
             <div className="balance__content-total">
-              <div className='balance__content-total-title'>Balance</div>
+              <div className='balance__content-total-title'>Balance:</div>
               <div className='balance__content-total-sum'>$20.39</div>
             </div>
             <button className='balance__content-topup'>
@@ -53,6 +54,12 @@ const Dashboard = () => {
             </button>
           </div>
         </div>
+      </div>
+      <div className="dashboard__plansBillings">
+          <h1 className='dashboard__plansBillings-title'>PLANS & BILLINGS</h1>
+          <div className='dashboard__plansBillings-content'>
+            <PlansBillings></PlansBillings>
+          </div>
       </div>
     </div>
   )
