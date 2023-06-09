@@ -1,10 +1,96 @@
+
 .planBilling{
-    display: flex;
-    justify-content: center;
+
     width: 100%;
     height: 100%;
     &__header{
+        padding: 16px 18px 0 19px;
+        width: 100%;
         display: flex;
         justify-content: space-between;
+        margin-bottom: 21px;
+        &-choose{
+            
+            display: flex;
+            .activeChoose{
+                width: 136px;
+                height: 40px;
+                background: #2A86FF;
+                border-radius: 22px;
+                color: #FFFFFF;
+                transition-property: transform;
+                transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+                transition-duration: 150ms;
+            }
+            &-btn{
+                font-family: 'GoogleSans', sans-serif;
+                justify-content: center;
+                align-items: center;
+                width: 136px;
+                height: 40px;
+                display: flex;
+                font-weight: 700;
+                font-size: 15px;
+                color: #8c8e90;cursor: pointer;
+            }
+        }
+        
+        &-filter{
+            display: flex;
+            height: 100%;
+            &-title{
+                padding-top: 12px;
+                font-size: 15px;
+                line-height: 19px;
+                font-family: 'GoogleSans', sans-serif;
+                color: #01162B;
+                font-weight: 400;
+                margin-right: 13px;
+    
+            }
+            &-none{
+                display: flex;
+                align-items: center;
+                width: 163px;
+                height: 40px;
+                border: 1px solid rgba(1, 22, 43, 0.1);
+                border-radius: 8px;
+                justify-content: space-between;
+                margin-right: 6px;
+                padding: 0 19px;
+            }   
+            &-asc{
+                display: flex;
+                align-items: center;
+                width: 114px;
+                height: 40px;
+                border: 1px solid rgba(1, 22, 43, 0.1);
+                border-radius: 8px;
+                justify-content: space-between;
+                margin-right: 6px;
+                padding: 0 15px;
+            }
+            &-input{
+                position: relative;
+                width: 239px;
+                height: 40px;
+            }
+            &-iconsearch{
+                position: absolute;
+                top: 20%;
+                left: 5%;
+            }
+            &-search{
+                width: 100%;
+                height: 100%;
+                background: #F5F5F5;
+                border-radius: 8px;
+                border: none;
+                padding-left: 54px;
+            }
+        }
+    }
+    &__table{
+        padding: 0 20px;
     }
 }
