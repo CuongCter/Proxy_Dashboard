@@ -1,0 +1,156 @@
+.bandwidth {
+    margin-left: 250px;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &__popup {
+        width: 618px;
+        height: 382px;
+        background: #01162B;
+        border: 1px solid #2A86FF;
+        border-radius: 25px;
+        padding: 24px 37px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        &-header {
+            display: flex;
+            width: 100%;
+            margin-bottom: 36px;
+            justify-content: space-between;
+
+            &-title {
+                font-weight: 700;
+                font-size: 20px;
+                color: #DEEDFF;
+            }
+
+            &-close {
+                width: 30px;
+                height: 30px;
+                background: #F5F5F5;
+                border-radius: 50%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-weight: 700;
+                font-size: 20px;
+                cursor: pointer;
+                font-family: 'GoogleSans', sans-serif;
+            }
+        }
+
+        &-main {
+            width: 100%;
+
+            &-amount {
+                display: flex;
+                width: 100%;
+                align-items: center;
+
+                &-title {
+                    color: #DEEDFF;
+                    font-weight: 400;
+                    font-size: 15px;
+                    line-height: 19px;
+
+                }
+
+                &-input {
+                    width: 429px;
+                    height: 40px;
+                    background: #E7F3FF;
+                    border-radius: 25px;
+                    margin-left: 29px;
+                    padding-left: 29px;
+                    border: none;
+                }
+            }
+
+            &-type {
+                display: flex;
+                width: 100%;
+                align-items: center;
+
+                &-title {
+                    color: #DEEDFF;
+                    font-weight: 400;
+                    font-size: 15px;
+                    line-height: 19px;
+
+                }
+
+                &-option {
+                    padding-top: 5px;
+                    margin-left: 70px;
+
+                    &-note {
+                        font-weight: 400;
+                        font-size: 15px;
+                        color: #FFFFFF;
+                        opacity: 0.5;
+                        margin-bottom: 10px;
+                    }
+                }
+            }
+
+            &-period {
+                display: flex;
+                width: 100%;
+                align-items: center;
+                margin-top: 20px;
+
+                &-title {
+                    color: #DEEDFF;
+                    font-weight: 400;
+                    font-size: 15px;
+                    line-height: 19px;
+
+                }
+
+                &-select {
+                    width: 429px;
+                    height: 40px;
+                    background: #E7F3FF;
+                    border-radius: 25px;
+                    margin-left: 53px;
+                    padding-left: 29px;
+                    border: none;
+                    padding-right: 40px;
+
+                    option {
+                        height: 100px;
+                    }
+                }
+            }
+
+            &-buy {
+                width: 109px;
+                height: 40px;
+                background: #2A86FF;
+                box-shadow: 0px 4px 10px rgba(8, 35, 106, 0.25);
+                border-radius: 25px;
+                font-weight: 700;
+                font-size: 15px;
+                line-height: 19px;
+                color: #FFFFFF;
+                margin-top: 32px;
+                border: none;
+                font-family: 'GoogleSans', sans-serif;
+            }
+        }
+    }
+}
+
+.label_bandwidth {
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 19px;
+    color: #DEEDFF;
+    margin-left: 13px;
+
+}
