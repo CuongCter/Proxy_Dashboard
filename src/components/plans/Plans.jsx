@@ -1,17 +1,18 @@
 import React from 'react'
 import '../../assets/scss/components/_plans.scss'
+import IconSelect from '../../assets/images/Select.png'
 const Plans = () => {
     return (
         <div className='plan'>
             <table class="plan__table">
                 <thead className='plan__table-header'>
                     <tr >
-                        <th>Order ID</th>
-                        <th>Total Bandwidth</th>
-                        <th>Used Bandwitdh</th>
-                        <th>Total Request</th>
-                        <th>Buy Time</th>
-                        <th>Expire Time</th>
+                        <th>Order ID <img className='iconSelect' src={IconSelect} alt="" /> </th>
+                        <th>Total Bandwidth <img className='iconSelect' src={IconSelect} alt="" /></th>
+                        <th>Used Bandwitdh <img className='iconSelect' src={IconSelect} alt="" /></th>
+                        <th>Total Request <img className='iconSelect' src={IconSelect} alt="" /></th>
+                        <th>Buy Time <img className='iconSelect' src={IconSelect} alt="" /></th>
+                        <th>Expire Time <img className='iconSelect' src={IconSelect} alt="" /></th>
                         <th>Status</th>
                     </tr>
                 </thead>
