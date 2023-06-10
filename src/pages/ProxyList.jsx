@@ -8,13 +8,20 @@ import IconSelect from '../assets/images/Select.png'
 import IconHidden from '../assets/images/-.png'
 import IconCopy from '../assets/images/Copy.png'
 import IconWIP from '../assets/images/WIP.png'
+import CreatePort from '../components/createPort/CreatePort'
 const ProxyList = () => {
-  const [popupCreat, setPopupCreat] = useState(false);
-  const showPopupCreat = () =>{
-    setPopupCreat(true);
-  }
+  const [isPopupOpen, setIsPopupOpen] = useState(false);
+
+  const openPopup = () => {
+    setIsPopupOpen(true);
+  };
+
+  const closePopup = () => {
+    setIsPopupOpen(false);
+  };
   return (
-    <div className='list'>
+    <div className={`list ${isPopupOpen ? "opacity" : ""}`}>
+      {isPopupOpen && <CreatePort onClose={closePopup}></CreatePort > }
       <div className='list__admin'>
         <Admin></Admin>
       </div>
@@ -24,7 +31,7 @@ const ProxyList = () => {
       <div className='list__content'>
         <div className='list__content-header'>
           <div className="list__content-header-option">
-            <div className='option-action' >+ Create Port
+            <div className='option-action' onClick={openPopup}>+ Create Port
             </div>
             <div className='option-action'>Change IP</div>
             <div className='option-action'>Change Port</div>
@@ -86,6 +93,7 @@ const ProxyList = () => {
                 </td>
                 <td align='center'>
                   <div className='list__table-body-services'>AccessG</div>
+                  <div className='list__table-body-services'>Youtube</div>
                 </td>
               </tr>
 
@@ -93,6 +101,7 @@ const ProxyList = () => {
           </table>
         </div>
       </div>
+      
     </div>
   )
 }

@@ -1,0 +1,183 @@
+@mixin inputCreate{
+    width: 553px;
+        height: 40px;
+        background: #E7F3FF;
+        border: 1px solid #2A86FF;
+        border-radius: 25px;
+        padding-left: 29px;
+        @content;
+}
+@mixin center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @content;
+}
+.createPort {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 1000;
+
+    transform: translate(-50%, -50%);
+
+    &__popupCreate {
+        width: 772px;
+        height: 443px;
+        background: #01162B;
+        border: 1px solid #2A86FF;
+        border-radius: 25px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        &-header {
+            padding: 21px 20px 0 37px;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+
+            &-title {
+                font-size: 20px;
+                color: #DEEDFF;
+            }
+
+            &-close {
+                width: 30px;
+                height: 30px;
+                background: #F5F5F5;
+                border-radius: 50%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-weight: 700;
+                font-size: 20px;
+                cursor: pointer;
+                font-family: 'GoogleSans', sans-serif;
+            }
+        }
+
+        &-create {
+            width: 100%;
+            padding: 21px 37px 0 37px;
+
+            &-port ,&-key, &-rotate, &-services{
+                position: relative;
+                align-items: center;
+                width: 100%;
+                margin-bottom: 10px;
+                display: flex;
+                justify-content: space-between;
+            }
+            &-geo{
+                align-items: center;
+                width: 100%;
+                margin-bottom: 10px;
+                display: flex;
+                justify-content: space-between;
+                
+            }
+        }
+        &-submit{
+            width: 118px;
+            height: 39px;
+            background: #2A86FF;
+            box-shadow: 0px 4px 10px rgba(8, 35, 106, 0.25);
+            border-radius: 25px;
+            @include center(){};
+            color: #FFFFFF;
+            font-size: 15px;
+            line-height: 19px;
+            font-weight: 700;
+            font-family: 'GoogleSans', sans-serif;
+            margin-top: 35px;
+        }
+    }
+    
+}
+
+.createPort , .key, .geo, .rotate, .services{
+    &-title {
+        font-weight: 400;
+        font-size: 15px;
+        color: #DEEDFF;
+    }
+
+    &-input {
+        @include inputCreate(){}
+    }
+    &-custom{
+        width: 108px;
+        height: 32px;
+        border: 1px solid #2A86FF;
+        border-radius: 25px;
+        font-weight: 700;
+        font-size: 15px;
+        color: #2A86FF;
+        position: absolute;
+        @include center(){};
+        right: 1%;
+    }
+}
+.geo-select-country, .geo-select-setup{
+    width: 270px;
+        height: 40px;
+        background: #E7F3FF;
+        border: 1px solid #2A86FF;
+        border-radius: 25px;
+        padding-left: 29px;
+}
+.geo-select-setup{
+    margin-left: 13px;
+}
+@mixin services{
+    padding: 3px 8px;
+    font-weight: 700;
+    font-size: 12px;
+    border-radius: 14px;
+    margin-right: 6px;
+    margin-bottom: 3px;
+    font-family: 'GoogleSans', sans-serif;
+    @content;
+}
+.services-option{
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 83px;
+    
+    &-create{
+        background: #2A86FF;
+        color: white;
+        @include services(){};
+    }
+    &-accessgoogle{
+        background: rgba(241, 180, 76, 0.2);
+        color: #F1B44C;
+        @include services(){};
+    }
+    &-youtube, &-gmail, &-instagram{
+        background: rgba(244, 106, 106, 0.2);
+        color: #F46A6A;
+        @include services(){};
+    }
+    &-googleplay{
+        background: rgba(52, 195, 143, 0.2);
+        color: #34C38F;
+        @include services(){};
+    }
+    &-apple, &-appstore{
+        color: #6F6AF8;
+        background: rgba(111, 106, 248, 0.2);
+        @include services(){};
+    }
+    &-facebook{
+        color: #2A86FF;
+        background: rgba(10, 165, 236, 0.2);
+        @include services(){};
+    }
+    &-outlook{
+        color: #2A86FF;
+        background: rgba(42, 134, 255, 0.2);
+        @include services(){};
+    }
+}

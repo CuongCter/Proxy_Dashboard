@@ -19,7 +19,7 @@
     padding-top: 52px;
     padding-right: 25px;
     width: 100%;
-
+    position: relative;
     &__admin {
         position: absolute;
         top: 44px;
@@ -54,14 +54,19 @@
                     padding: 0 20px;
                     border: 1px solid #2A86FF;
                     border-radius: 22px;
-
+                    cursor: pointer;
                     @include center() {}
-
+                    
                     color: #2A86FF;
                     margin-right: 15px;
                     font-weight: 700;
                     font-family: 'GoogleSans',
                     sans-serif;
+                }
+                .option-action:hover{
+                    background-color: #2A86FF;
+                    color: white;
+                    transition: all;
                 }
             }
 
@@ -167,6 +172,7 @@
                 border-radius: 14px;
                 font-family: 'GoogleSans', sans-serif;
                 color: #F1B44C;
+                margin: 2px 0;
             }
             tr {
                 height: 62px;
