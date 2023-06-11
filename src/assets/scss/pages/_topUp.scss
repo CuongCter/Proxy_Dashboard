@@ -1,0 +1,128 @@
+@mixin label {
+    margin-bottom: 10px;
+    margin-top: 30px;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 23px;
+    color: #01162B;
+    font-family: 'GoogleSans', sans-serif;
+    @content;
+}
+
+@mixin input {
+    width: 441px;
+    height: 40px;
+    background: #FFFFFF;
+    border: 1px solid #2A86FF;
+    border-radius: 25px;
+    padding-left: 27px;
+    @content;
+}
+
+@mixin note {
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 19px;
+    color: #01162B;
+    opacity: 0.5;
+    margin-bottom: 17px;
+    @content;
+
+}
+
+.topup {
+    width: 100%;
+    margin-left: 250px;
+    padding-top: 52px;
+    padding-left: 28px;
+
+    &__admin {
+        position: absolute;
+        top: 44px;
+        right: 51px;
+    }
+
+    &__title {
+        &-name {
+            font-weight: 700;
+            line-height: 32px;
+            font-size: 25px;
+        }
+
+        &-note {
+            @include note(){};
+        }
+    }
+
+    &__step {
+        &-one {
+            &-label {
+                @include label() {}
+
+                ;
+            }
+
+            &-input {
+                @include input() {}
+            }
+        }
+
+        &-two {
+            &-label {
+                @include label() {}
+
+                ;
+            }
+
+            &-note {
+                @include note(){};
+            }
+
+            &-input {
+                @include input() {}
+            }
+        }
+
+        &-three {
+            &-label {
+                @include label() {}
+
+                ;
+            }
+        }
+
+        &-four {
+            &-label {
+                @include label() {}
+
+                ;
+            }
+            &-note{
+                @include note(){};
+            }
+        }
+    }
+    &__submit{
+        width: 100%;
+        margin-left: 350px;        
+        &-button{
+            width: 381px;
+            height: 50px; 
+            background: #2A86FF;
+            box-shadow: 0px 4px 10px rgba(8, 35, 106, 0.25);
+            border-radius: 25px;
+            cursor: pointer; 
+            display: flex;
+            align-items: center;
+            justify-content: center; 
+            border: none;
+            font-weight: 700;
+            font-size: 15px;
+            line-height: 19px;
+            font-family: 'GoogleSans', sans-serif;
+            color: #FFFFFF;
+
+        }
+        
+    }
+}
