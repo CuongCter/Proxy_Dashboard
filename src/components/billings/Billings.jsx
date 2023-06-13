@@ -1,6 +1,7 @@
-    import React from 'react'
+import React from 'react'
+import { formatBytes, formatTime } from '../../services/utils'
     
-    const Billings = () => {
+    const Billings = (props) => {
       return (
         <div className='plan'>
         <table class="plan__table">
@@ -11,25 +12,20 @@
                     <th>Bandwitdh</th>
                     <th>Buy Time</th>
                     <th>Type</th>
-
                 </tr>
             </thead>
             <tbody className='plan__table-body'>      
-                <tr>
-                    <td>Data 1</td>
-                    <td>Data 2</td>
-                    <td>Data 3</td>
-                    <td>Data 1</td>
-                    <td>Data 2</td>
-
-                </tr>
-                <tr>
-                    <td>Data 1</td>
-                    <td>Data 2</td>
-                    <td>Data 3</td>
-                    <td>Data 1</td>
-                    <td>Data 2</td>
-                </tr>
+            {props.billings.map((item)=>{
+                    return (
+                       <tr key={item.id}>
+                        <td>{item.id}</td>
+                        <td>${item.amount}</td>
+                        <td>{formatBytes(item.totalBandwidth)}</td>
+                        <td>{formatTime(item.buyTime)}</td>
+                    </tr>
+                   
+                        )
+                   })}
             </tbody>
         </table>
     </div>

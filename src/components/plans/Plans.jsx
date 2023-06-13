@@ -1,7 +1,9 @@
 import React from 'react'
 import '../../assets/scss/components/_plans.scss'
 import IconSelect from '../../assets/images/Select.png'
-const Plans = () => {
+import { formatBytes, formatTime } from '../../services/utils'
+
+const Plans = (props) => {
     return (
         <div className='plan'>
             <table class="plan__table">
@@ -17,24 +19,23 @@ const Plans = () => {
                     </tr>
                 </thead>
                 <tbody className='plan__table-body'>      
-                    <tr>
-                        <td>Data 1</td>
-                        <td>Data 2</td>
-                        <td>Data 3</td>
-                        <td>Data 1</td>
-                        <td>Data 2</td>
-                        <td>Data 3</td>
-                        <td>Data 3</td>
+                   {props.billings.map((item)=>{
+                    return (
+                       <tr key={item.id}>
+                        <td>{item.id}</td>
+                        <td>{formatBytes(item.totalBandwidth)}</td>
+                        <td>{formatBytes(item.currentBandwidth)}</td>
+                        <td>{item.totalRequest}</td>
+                        <td>{formatTime(item.buyTime)}</td>
+                        <td>{formatTime(item.expiredTime)}</td>
+                        {
+                            item.isActive ? <td className="list__table-body-status">Ative</td> : <td className="services-option-youtube">DeAtive</td>
+                        }
+                        
                     </tr>
-                    <tr>
-                        <td>Data 1</td>
-                        <td>Data 2</td>
-                        <td>Data 3</td>
-                        <td>Data 1</td>
-                        <td>Data 2</td>
-                        <td>Data 3</td>
-                        <td>Data 3</td>
-                    </tr>
+                   
+                        )
+                   })}
                 </tbody>
             </table>
         </div>

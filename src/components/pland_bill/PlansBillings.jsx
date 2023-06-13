@@ -1,12 +1,11 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import '../../assets/scss/components/_plansBillings.scss'
 import IconSelect from '../../assets/images/Select.png'
 import IconSearch from '../../assets/images/Search.png'
 import Plans from '../plans/Plans'
 import Billings from '../billings/Billings'
-const PlansBillings = () => {
+const PlansBillings = (props) => {
   const [activeChoose, setActiveChoose] = useState("plans")
-
   return (
     <div className='planBilling'>
         <div className="planBilling__header">
@@ -37,7 +36,7 @@ const PlansBillings = () => {
         <div className='planBilling__table'>
           
           {
-            activeChoose === "plans" ? <Plans></Plans> : <Billings></Billings>
+            activeChoose === "plans" ? <Plans {...props}></Plans> : <Billings {...props}></Billings>
           }
         </div>
     </div>
